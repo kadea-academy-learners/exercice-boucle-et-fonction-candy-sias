@@ -12,8 +12,23 @@
 function somme(n) {
   // Exercice non implémenté : retourner la somme de 1 à n
   // Placeholder neutre : retourne 0 pour indiquer non-implémentation
-  return 0;
+
+  // Vérifier que n est un nombre valide et positif
+  if (typeof n !== "number" || isNaN(n) || n < 1) return 0;
+
+  let total = 0;
+
+  // Additionner tous les entiers de 1 à n
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+
+  return total;
 }
+somme(4); // 1 + 2 + 3 + 4 = 10
+somme(0); // 0 (car n est invalide)
+somme(-3); // 0
+
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { somme }

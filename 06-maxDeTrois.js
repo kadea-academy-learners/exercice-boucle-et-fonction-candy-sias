@@ -12,7 +12,25 @@
 */
 function maxDeTrois(a, b, c) {
   // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+
+  // Vérifier le nombre d'arguments
+  if (arguments.length !== 3) return null;
+
+  // Vérifier les types et valeurs
+  if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") return null;
+  if (isNaN(a) || isNaN(b) || isNaN(c)) return null;
+
+  // Cas : les trois nombres sont égaux
+  if (a === b && b === c) {
+    return "Les trois nombres sont égaux";
+  }
+
+  // Sinon, retourner le plus grand des trois
+  return Math.max(a, b, c);
+  // if (a > b && a > c) return a;
+  // else if (b > c) return b;
+  // else return c;
+
 }
 
 // Ne pas modifier la ligne ci-dessous
